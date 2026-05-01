@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ritik Raushan — Resume</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 13px;
+    color: #1a1a1a;
+    background: #fff;
+    padding: 36px 44px;
+    max-width: 860px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  /* Header */
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid #4f46e5; }
+  .header-left h1 { font-size: 26px; font-weight: 800; color: #1a1a1a; letter-spacing: -0.5px; }
+  .header-left .title { font-size: 12px; color: #6366f1; font-weight: 600; margin-top: 3px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .header-right { text-align: right; font-size: 12px; color: #555; line-height: 1.8; }
+  .header-right a { color: #4f46e5; text-decoration: none; }
+
+  /* Section */
+  .section { margin-bottom: 18px; }
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #4f46e5;
+    border-bottom: 1px solid #e0e0ff;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  /* Profile */
+  .profile p { color: #444; font-size: 12.5px; line-height: 1.65; }
+
+  /* Skills grid */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
+  .skill-row { display: flex; gap: 6px; font-size: 12px; }
+  .skill-label { font-weight: 700; color: #1a1a1a; white-space: nowrap; min-width: 130px; }
+  .skill-value { color: #444; }
+
+  /* Projects */
+  .project { margin-bottom: 13px; }
+  .project-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .project-name { font-weight: 700; font-size: 13px; color: #1a1a1a; }
+  .project-badge { font-size: 10.5px; font-weight: 600; color: #fff; background: #4f46e5; padding: 2px 8px; border-radius: 20px; }
+  .project-tech { font-size: 11px; color: #6366f1; margin: 2px 0 4px; font-weight: 500; }
+  .project-desc { font-size: 12px; color: #444; line-height: 1.6; }
+  .project-desc li { margin-left: 16px; margin-bottom: 2px; }
+  .project-link { font-size: 11px; color: #4f46e5; text-decoration: none; }
+
+  /* Achievements */
+  .achievement { display: flex; gap: 10px; margin-bottom: 8px; align-items: flex-start; }
+  .achievement-dot { width: 7px; height: 7px; border-radius: 50%; background: #4f46e5; margin-top: 5px; flex-shrink: 0; }
+  .achievement-text { font-size: 12.5px; color: #333; line-height: 1.5; }
+  .achievement-text strong { color: #1a1a1a; }
+
+  /* Certifications */
+  .cert { margin-bottom: 6px; font-size: 12px; }
+  .cert strong { color: #1a1a1a; }
+  .cert span { color: #666; }
+
+  /* Education */
+  .edu { display: flex; justify-content: space-between; }
+  .edu-left .degree { font-weight: 700; font-size: 13px; }
+  .edu-left .uni { font-size: 12px; color: #555; margin-top: 2px; }
+  .edu-right { text-align: right; font-size: 12px; color: #666; }
+
+  @media print {
+    body { padding: 24px 32px; }
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Print button (hidden on print) -->
+<div class="no-print" style="text-align:right; margin-bottom: 16px;">
+  <button onclick="window.print()" style="padding: 8px 20px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 13px; cursor: pointer; font-weight: 600;">
+    Download / Print PDF
+  </button>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <h1>Ritik Raushan</h1>
+    <div class="title">Full Stack Developer · AI Enthusiast · IoT Builder</div>
+  </div>
+  <div class="header-right">
+    ritikravi7724@gmail.com<br/>
+    <a href="https://github.com/ritikravi">github.com/ritikravi</a><br/>
+    <a href="https://www.linkedin.com/in/ritik-raushan-626584383/">linkedin.com/in/ritik-raushan-626584383</a> &nbsp;|&nbsp;
+    <a href="https://x.com/ritikravi7724">x.com/ritikravi7724</a><br/>
+    B.Tech CSE (1st Year) · Lovely Professional University, Punjab
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div class="section profile">
+  <div class="section-title">Profile</div>
+  <p>Full Stack Developer with hands-on experience in the MERN stack, building scalable applications integrating AI, cloud, and embedded systems. Developed 6+ real-world projects across AI, IoT, and intelligent platforms — including a hackathon-winning smart classroom system. Strong foundation in backend systems, REST APIs, and deployment, with growing expertise in Agentic AI and Applied ML engineering.</p>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-grid">
+    <div class="skill-row"><span class="skill-label">Languages:</span><span class="skill-value">JavaScript, Python, C, Dart</span></div>
+    <div class="skill-row"><span class="skill-label">AI & LLMs:</span><span class="skill-value">Groq API, LLaMA 3.3 70B, Whisper, Agentic AI, OpenAI</span></div>
+    <div class="skill-row"><span class="skill-label">Web (MERN):</span><span class="skill-value">React 18, Node.js, Express.js, MongoDB, REST APIs</span></div>
+    <div class="skill-row"><span class="skill-label">Mobile:</span><span class="skill-value">Flutter, Dart, Provider, fl_chart</span></div>
+    <div class="skill-row"><span class="skill-label">Auth & Backend:</span><span class="skill-value">JWT, bcryptjs, node-cron, Socket.io, Multer</span></div>
+    <div class="skill-row"><span class="skill-label">Blockchain:</span><span class="skill-value">Solidity, Hardhat, Ethereum, ethers.js, MetaMask</span></div>
+    <div class="skill-row"><span class="skill-label">Embedded & IoT:</span><span class="skill-value">ESP32, Arduino, Raspberry Pi, I2S Audio, MQTT</span></div>
+    <div class="skill-row"><span class="skill-label">Cloud & Deploy:</span><span class="skill-value">Vercel, Render, Railway, PM2, AWS Basics, Cloudinary</span></div>
+    <div class="skill-row"><span class="skill-label">Tools:</span><span class="skill-value">Git, GitHub, Postman, Figma, VS Code</span></div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+  <div class="section-title">Projects</div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">HackAI — Autonomous Placement Intelligence System</span>
+      <span class="project-badge">Live · Vercel</span>
+    </div>
+    <div class="project-tech">React 18 · Node.js · MongoDB Atlas · Groq LLaMA 3.3 70B · JSearch API · GitHub API · LeetCode GraphQL · node-cron · JWT</div>
+    <ul class="project-desc">
+      <li>Agentic AI system that autonomously monitors students, predicts placement probability, and intervenes when risk is detected — runs daily via cron without human input.</li>
+      <li>Resume Generator fetches real GitHub repos + LeetCode stats and generates ATS-friendly resumes tailored to live job listings from LinkedIn/Indeed via JSearch API.</li>
+      <li>Mock interview engine, AI career coach, digital twin radar chart, and skill gap analysis per job — all powered by Groq LLaMA 3.3 70B (free, 14,400 req/day).</li>
+    </ul>
+    <a class="project-link" href="https://hackai-seven.vercel.app">hackai-seven.vercel.app</a> &nbsp;|&nbsp;
+    <a class="project-link" href="https://github.com/ritikravi/hackAI">github.com/ritikravi/hackAI</a>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">LectureAI — AI Smart Classroom System</span>
+      <span class="project-badge">🏆 Hackathon Winner</span>
+    </div>
+    <div class="project-tech">Node.js · Express · MongoDB · EJS · Groq Whisper · LLaMA 3.3 70B · Socket.io · ESP32 · Raspberry Pi</div>
+    <ul class="project-desc">
+      <li>Records or uploads lecture audio → Groq Whisper transcribes → LLaMA 3.3 generates 12+ study outputs: summaries, flashcards, quizzes, mind maps, glossary, ELI5, and RAG-style chat.</li>
+      <li>Built custom ESP32 Smart Mic (INMP441 I2S) that streams raw PCM audio over WiFi to Node.js server in real-time — no app required.</li>
+      <li>Live lecture mode with Socket.io: chunked recording + mini-summaries every 5 minutes during class.</li>
+    </ul>
+    <a class="project-link" href="https://github.com/ritikravi/SMART-MIC">github.com/ritikravi/SMART-MIC</a>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">LMS System — Library Management (MERN)</span>
+      <span class="project-badge">Live · Vercel + Render</span>
+    </div>
+    <div class="project-tech">React 18 · Vite · Zustand · TanStack Query · Node.js · MongoDB Atlas · JWT · Nodemailer · node-cron</div>
+    <ul class="project-desc">
+      <li>Full-stack library portal with student portal (search, issue, renew, fines, e-resources) and admin/librarian panel with live stats dashboard.</li>
+      <li>Automatic daily fine calculation via cron (₹2/day overdue), email notifications, JWT refresh tokens, role-based access (Student/Librarian/Admin).</li>
+    </ul>
+    <a class="project-link" href="https://lms-system-rose.vercel.app">lms-system-rose.vercel.app</a> &nbsp;|&nbsp;
+    <a class="project-link" href="https://github.com/ritikravi/lms-system">github.com/ritikravi/lms-system</a>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">Smart Attendance System</span>
+      <span class="project-badge">Production</span>
+    </div>
+    <div class="project-tech">Flutter · Dart · Node.js · Express · MongoDB · JWT · Cloudinary · PM2</div>
+    <ul class="project-desc">
+      <li>Production-ready school management system — Flutter mobile app + Node.js backend. Role-based auth (Admin, Teacher, Student, Parent), attendance, marks, fees, leave, PDF reports.</li>
+    </ul>
+    <a class="project-link" href="https://github.com/ritikravi/smart_attendance_system_2">github.com/ritikravi/smart_attendance_system_2</a>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">Secure E-Voting System &nbsp;·&nbsp; AttendX — Attendance Predictor</span>
+    </div>
+    <div class="project-tech">Solidity · Hardhat · Ethereum · React · ethers.js · MetaMask &nbsp;|&nbsp; Flutter · Node.js · Prediction Engine</div>
+    <ul class="project-desc">
+      <li>Blockchain e-voting: immutable on-chain vote storage via Solidity smart contracts, MetaMask transaction signing, JWT + OTP voter auth.</li>
+      <li>AttendX: Flutter app with custom prediction engine — calculates max skippable classes and recovery plan. Live backend on Render.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">Intelligent Tractor Data Extraction — OCR & LLMs</span>
+      <span class="project-badge">IIT Guwahati Hackathon</span>
+    </div>
+    <div class="project-tech">Python · OCR · Ollama · NLP · LLM Fine-tuning</div>
+    <ul class="project-desc">
+      <li>AI document processing system to extract tractor specs (model, price, specifications) from unstructured documents using OCR and Ollama LLMs.</li>
+      <li>Fine-tuned models on 500+ datasets using NLP techniques to structure, classify, and summarize extracted data.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">Line Follower Robot &nbsp;·&nbsp; Bluetooth RC Car</span>
+    </div>
+    <div class="project-tech">Arduino · Embedded C · IR Sensors · PID Control · ESP32 · Bluetooth LE</div>
+    <ul class="project-desc">
+      <li>LFR: autonomous robot with PID control algorithm for smooth line tracking. Sub-5ms correction response time.</li>
+      <li>RC Car: ESP32-based car controlled via custom Bluetooth mobile app. Full bidirectional communication.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="section">
+  <div class="section-title">Achievements</div>
+  <div class="achievement">
+    <div class="achievement-dot"></div>
+    <div class="achievement-text"><strong>2nd Place — SemiXthon 2026, Delhi Technological University (DTU)</strong> — Built an AI + IoT smart classroom system in 24 hours combining ESP32 hardware, Groq Whisper STT, and LLaMA 3.3 AI.</div>
+  </div>
+  <div class="achievement">
+    <div class="achievement-dot"></div>
+    <div class="achievement-text"><strong>Intelligent Document AI Hackathon — IIT Guwahati</strong> — Developed OCR + LLM pipeline for tractor data extraction from unstructured documents.</div>
+  </div>
+  <div class="achievement">
+    <div class="achievement-dot"></div>
+    <div class="achievement-text"><strong>Community Mentor</strong> — Conducted technical sessions on MERN Stack, IoT with ESP32, and AI API integration for 100+ students at LPU.</div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="section">
+  <div class="section-title">Certifications</div>
+  <div class="cert"><strong>Introduction to Cloud Computing</strong> — <span>Infosys Springboard (March 2026) · Cloud fundamentals, deployment models, scalability</span></div>
+  <div class="cert"><strong>Machine Learning & Image Processing</strong> — <span>NASSCOM / thingQbator</span></div>
+  <div class="cert"><strong>AWS Solutions Architecture Job Simulation</strong> — <span>Forage</span></div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="edu">
+    <div class="edu-left">
+      <div class="degree">B.Tech — Computer Science & Engineering</div>
+      <div class="uni">Lovely Professional University, Punjab, India</div>
+    </div>
+    <div class="edu-right">
+      1st Year · 2025 – 2029<br/>
+      <span style="color:#4f46e5; font-weight:600;">Active · Current</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

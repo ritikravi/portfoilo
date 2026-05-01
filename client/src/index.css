@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #ffffff;
+    --fg: #0a0a0a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --accent: #6366f1;
+    --accent2: #8b5cf6;
+    --card: #f9fafb;
+  }
+  .dark {
+    --bg: #050508;
+    --fg: #f0f0f5;
+    --muted: #9ca3af;
+    --border: #1f2937;
+    --accent: #818cf8;
+    --accent2: #a78bfa;
+    --card: #0f1117;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #6366f133;
+    color: var(--fg);
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #6366f155; border-radius: 2px; }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glow {
+    box-shadow: 0 0 40px #6366f122, 0 0 80px #6366f108;
+  }
+  .glass {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .dark .glass {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+}
