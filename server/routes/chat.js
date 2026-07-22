@@ -17,7 +17,7 @@ function generateResponse(message) {
   const msg = message.toLowerCase();
 
   if (msg.includes('rmna') || msg.includes('clothing') || msg.includes('startup') || msg.includes('streetwear')) {
-    return `RMNA Street is a modern clothing startup focused on luxury streetwear and everyday fits. Ritik built the complete full-stack web presence as co-founder/developer — live at rmnastreet.com. His first real-world domain deployment, owning everything from UI design to production deployment solo.`;
+    return `RMNA Street is a clothing startup founded by Ritik, focused on luxury streetwear and everyday fits. He built the complete full-stack web presence as founder and developer — live at rmnastreet.com. His first real-world domain deployment, owning everything from UI design to production solo.`;
   }
   if (msg.includes('iit ropar') || msg.includes('internship') || msg.includes('landslide') || msg.includes('nrf5340') || msg.includes('zephyr') || msg.includes('awadh') || msg.includes('sensrs')) {
     return `Ritik is currently interning at IIT Ropar (CoE SEnSRS & TIH-AWaDH), working on an AI-Based Landslide Monitoring & Early Warning System. The system uses Nordic nRF5340 + Zephyr RTOS with RS485 Modbus sensors (soil moisture, wind, rain gauge). Dual ML: Random Forest for landslide risk prediction + Isolation Forest for anomaly detection, trained on 825+ real sensor observations. Includes Power BI real-time analytics and forecasting up to 3 hours ahead. Had the opportunity to meet Prof. Rajeev Ahuja (Director, IIT Ropar) and work with industry-grade UAV/geomatics equipment.`;
