@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ritik Raushan — Quick Resume (Editable)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 12.5px;
+    color: #1a1a1a;
+    background: #f4f4f8;
+    line-height: 1.5;
+  }
+
+  /* Toolbar */
+  .toolbar {
+    background: #1e1e2e;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .toolbar-left { color: #a5a5c0; font-size: 12px; }
+  .toolbar-left span { color: #6366f1; font-weight: 700; }
+  .toolbar-right { display: flex; gap: 8px; align-items: center; }
+  .btn {
+    padding: 7px 16px;
+    border: none;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn-print { background: #4f46e5; color: #fff; }
+  .btn-reset { background: #3f3f5a; color: #ccc; }
+  .btn-full { background: #22223a; color: #888; border: 1px solid #3f3f5a; }
+  .edit-tip { color: #6b6b8a; font-size: 11px; }
+
+  /* Page */
+  .page {
+    background: #fff;
+    max-width: 860px;
+    margin: 20px auto;
+    padding: 32px 40px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    border-radius: 4px;
+    min-height: 1060px;
+  }
+
+  /* Header */
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #4f46e5; }
+  .header-left h1 { font-size: 24px; font-weight: 800; color: #1a1a1a; letter-spacing: -0.5px; }
+  .header-left .title { font-size: 11.5px; color: #6366f1; font-weight: 600; margin-top: 3px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .header-right { text-align: right; font-size: 11.5px; color: #555; line-height: 1.8; }
+  .header-right a { color: #4f46e5; text-decoration: none; }
+
+  /* Sections */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #4f46e5;
+    border-bottom: 1px solid #e0e0ff;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  /* Two-col layout */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+
+  /* Skills */
+  .skill-row { display: flex; gap: 5px; font-size: 11.5px; margin-bottom: 3px; }
+  .skill-label { font-weight: 700; color: #1a1a1a; white-space: nowrap; min-width: 110px; }
+  .skill-value { color: #444; }
+
+  /* Experience / Projects */
+  .item { margin-bottom: 10px; }
+  .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .item-name { font-weight: 700; font-size: 12.5px; color: #1a1a1a; }
+  .item-badge { font-size: 10px; font-weight: 600; color: #fff; background: #4f46e5; padding: 1px 7px; border-radius: 20px; white-space: nowrap; }
+  .item-sub { font-size: 11px; color: #6366f1; margin: 1px 0 3px; font-weight: 500; }
+  .item-desc { font-size: 11.5px; color: #444; line-height: 1.55; padding-left: 14px; }
+  .item-desc li { margin-bottom: 1px; }
+  .item-link { font-size: 10.5px; color: #4f46e5; text-decoration: none; }
+
+  /* Achievements inline */
+  .ach-list { list-style: none; }
+  .ach-list li { display: flex; gap: 8px; margin-bottom: 5px; align-items: flex-start; font-size: 11.5px; color: #333; }
+  .ach-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #4f46e5; margin-top: 5px; flex-shrink: 0; }
+  .ach-list li strong { color: #1a1a1a; }
+
+  /* Certs inline */
+  .cert-inline { font-size: 11.5px; color: #444; margin-bottom: 3px; }
+  .cert-inline strong { color: #1a1a1a; }
+
+  /* Education */
+  .edu { display: flex; justify-content: space-between; font-size: 12px; }
+  .edu-left .degree { font-weight: 700; }
+  .edu-left .uni { font-size: 11px; color: #555; margin-top: 1px; }
+  .edu-right { text-align: right; font-size: 11px; color: #666; }
+
+  /* Editable styles */
+  [contenteditable="true"] {
+    outline: none;
+    border-radius: 3px;
+    transition: background 0.15s;
+  }
+  [contenteditable="true"]:hover {
+    background: #f0f0ff;
+  }
+  [contenteditable="true"]:focus {
+    background: #e8e8ff;
+    box-shadow: 0 0 0 2px #6366f144;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .toolbar { display: none; }
+    .page { margin: 0; padding: 24px 32px; box-shadow: none; border-radius: 0; min-height: unset; }
+    [contenteditable] { background: none !important; box-shadow: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="toolbar-left">✏️ <span>Editable Resume</span> — click any text to edit, then print</div>
+  <div class="toolbar-right">
+    <span class="edit-tip">All text is editable</span>
+    <button class="btn btn-reset" onclick="resetPage()">Reset</button>
+    <a href="resume.html" class="btn btn-full" style="text-decoration:none;">Full Resume</a>
+    <button class="btn btn-print" onclick="window.print()">⬇ Download / Print PDF</button>
+  </div>
+</div>
+
+<!-- PAGE -->
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1 contenteditable="true">Ritik Raushan</h1>
+      <div class="title" contenteditable="true">Full Stack Developer · AI Enthusiast · IoT Builder · Research Intern @ IIT Ropar</div>
+    </div>
+    <div class="header-right" contenteditable="true">
+      ritikravi7724@gmail.com<br/>
+      github.com/ritikravi &nbsp;|&nbsp; linkedin.com/in/ritik-raushan-626584383<br/>
+      B.Tech CSE · Lovely Professional University, Punjab · 2025–2029
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="section">
+    <div class="section-title">Profile</div>
+    <div contenteditable="true" style="font-size:12px; color:#444; line-height:1.6;">
+      Full Stack Developer and Research Intern at IIT Ropar with experience in MERN stack, Embedded Systems (Nordic nRF5340, Zephyr RTOS), and Applied ML. Built 7+ production projects across AI, IoT, and Web. Google Student Ambassador 2026 (Gemini Program). 2nd place @ SemiXthon'26, DTU. Strong in backend systems, REST APIs, Agentic AI, and cloud deployment.
+    </div>
+  </div>
+
+  <!-- SKILLS + EDUCATION side by side -->
+  <div class="two-col">
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skill-row"><span class="skill-label" contenteditable="true">Languages:</span><span class="skill-value" contenteditable="true">JavaScript, Python, C, Dart</span></div>
+      <div class="skill-row"><span class="skill-label" contenteditable="true">AI & LLMs:</span><span class="skill-value" contenteditable="true">Groq, LLaMA 3.3 70B, Whisper, Agentic AI, OpenAI</span></div>
+      <div class="skill-row"><span class="skill-label" contenteditable="true">Web (MERN):</span><span class="skill-value" contenteditable="true">React 18, Node.js, Express.js, MongoDB, REST APIs</span></div>
+      <div class="skill-row"><span class="skill-label" contenteditable="true">Embedded & IoT:</span><span class="skill-value" contenteditable="true">nRF5340, Zephyr RTOS, ESP32, RS485, Arduino, MQTT</span></div>
+      <div class="skill-row"><span class="skill-label" contenteditable="true">ML & Data:</span><span class="skill-value" contenteditable="true">Scikit-Learn, Random Forest, Power BI, Flask, Pandas</span></div>
+      <div class="skill-row"><span class="skill-label" contenteditable="true">Mobile:</span><span class="skill-value" contenteditable="true">Flutter, Dart, Provider</span></div>
+      <div class="skill-row"><span class="skill-label" contenteditable="true">Cloud & Tools:</span><span class="skill-value" contenteditable="true">Vercel, Render, PM2, Git, Postman, Figma</span></div>
+    </div>
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu">
+        <div class="edu-left">
+          <div class="degree" contenteditable="true">B.Tech — Computer Science & Engineering</div>
+          <div class="uni" contenteditable="true">Lovely Professional University, Punjab, India</div>
+          <div style="font-size:11px; color:#4f46e5; font-weight:600; margin-top:2px;" contenteditable="true">1st Year · 2025–2029 · Active</div>
+        </div>
+      </div>
+      <div class="section-title" style="margin-top:12px;">Certifications</div>
+      <div class="cert-inline" contenteditable="true"><strong>Introduction to Cloud Computing</strong> — Infosys Springboard</div>
+      <div class="cert-inline" contenteditable="true"><strong>Machine Learning & Image Processing</strong> — NASSCOM / thingQbator</div>
+      <div class="cert-inline" contenteditable="true"><strong>AWS Solutions Architecture Simulation</strong> — Forage</div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Experience</div>
+    <div class="item">
+      <div class="item-header">
+        <span class="item-name" contenteditable="true">Research Intern — AI-Based Landslide Monitoring & Early Warning System</span>
+        <span class="item-badge" contenteditable="true">IIT Ropar · 2026</span>
+      </div>
+      <div class="item-sub" contenteditable="true">CoE SEnSRS & TIH-AWaDH, Indian Institute of Technology Ropar</div>
+      <ul class="item-desc" contenteditable="true">
+        <li>Embedded firmware on Nordic nRF5340 + Zephyr RTOS with RS485 Modbus sensors (soil moisture, wind, rain gauge) using UART & GPIO.</li>
+        <li>Built dual ML pipeline: Random Forest (risk prediction) + Isolation Forest (anomaly detection) on 825+ real sensor observations; forecasting 3hrs ahead.</li>
+        <li>Full MERN dashboard with Power BI real-time streaming, India hazard map (ISRO/NRSC data), and on-site field testing at CoE SEnSRS.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-name" contenteditable="true">HackAI — Autonomous Placement Intelligence System</span>
+        <span class="item-badge" contenteditable="true">Live · Vercel</span>
+      </div>
+      <div class="item-sub" contenteditable="true">React 18 · Node.js · MongoDB · Groq LLaMA 3.3 70B · JSearch API · GitHub API · LeetCode GraphQL · node-cron</div>
+      <ul class="item-desc" contenteditable="true">
+        <li>Agentic AI system that autonomously predicts placement probability, runs mock interviews, and generates ATS-friendly resumes from real GitHub + LeetCode data.</li>
+        <li>Daily cron agent auto-intervenes when student risk is detected. Skill gap analysis per live job listing via JSearch API.</li>
+      </ul>
+      <span class="item-link" contenteditable="true">hackai-seven.vercel.app · github.com/ritikravi/hackAI</span>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-name" contenteditable="true">LectureAI — AI Smart Classroom System</span>
+        <span class="item-badge" contenteditable="true">🏆 2nd Place DTU</span>
+      </div>
+      <div class="item-sub" contenteditable="true">Node.js · Groq Whisper · LLaMA 3.3 70B · Socket.io · ESP32 · Raspberry Pi</div>
+      <ul class="item-desc" contenteditable="true">
+        <li>Lecture audio → Groq Whisper transcription → 12+ AI study outputs (flashcards, quizzes, mind maps, RAG chat) via LLaMA 3.3.</li>
+        <li>Custom ESP32 Smart Mic streams raw PCM audio over WiFi; live lecture mode with Socket.io mini-summaries every 5 mins.</li>
+      </ul>
+      <span class="item-link" contenteditable="true">github.com/ritikravi/SMART-MIC</span>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-name" contenteditable="true">Smart Attendance System · LMS System · AttendX</span>
+      </div>
+      <div class="item-sub" contenteditable="true">Flutter · Node.js · MongoDB · JWT · Cloudinary · PM2 · Zustand · TanStack Query · node-cron</div>
+      <ul class="item-desc" contenteditable="true">
+        <li>Production school management: Flutter app + Node.js backend, role-based auth (Admin/Teacher/Student/Parent), attendance, marks, fees, PDF reports.</li>
+        <li>LMS: full library portal with auto daily fine cron (₹2/day), JWT refresh tokens, role-based access. Live at lms-system-rose.vercel.app</li>
+        <li>AttendX: Flutter app with custom prediction engine — calculates max skippable classes and recovery plan before detention.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="section">
+    <div class="section-title">Achievements & Recognition</div>
+    <ul class="ach-list" contenteditable="true">
+      <li><strong>Google Student Ambassador 2026 (Gemini Program)</strong> — Selected to represent Google AI & developer ecosystem at LPU.</li>
+      <li><strong>2nd Place — SemiXthon'26, DTU</strong> — Built AI + IoT smart classroom system (ESP32 + Groq Whisper + LLaMA 3.3) in 24 hours.</li>
+      <li><strong>IIT Guwahati Hackathon</strong> — OCR + LLM pipeline for intelligent tractor data extraction from unstructured documents.</li>
+      <li><strong>LPU Achievers Meet</strong> — Recognized by Vice Chancellor for hackathon achievements and student contributions.</li>
+      <li><strong>Community Mentor</strong> — Technical sessions on MERN, IoT, and AI APIs for 100+ students at LPU.</li>
+    </ul>
+  </div>
+
+</div><!-- end .page -->
+
+<script>
+  // Save to localStorage on every keystroke
+  document.addEventListener('input', () => {
+    localStorage.setItem('resume_edit_content', document.querySelector('.page').innerHTML);
+  });
+
+  // Restore on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('resume_edit_content');
+    if (saved) document.querySelector('.page').innerHTML = saved;
+  });
+
+  function resetPage() {
+    if (confirm('Reset all edits back to default?')) {
+      localStorage.removeItem('resume_edit_content');
+      location.reload();
+    }
+  }
+</script>
+
+</body>
+</html>
