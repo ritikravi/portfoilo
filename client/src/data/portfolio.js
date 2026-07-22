@@ -145,6 +145,13 @@ export const achievements = [
     type: 'community',
   },
   {
+    year: '2025–26',
+    title: 'Full Stack Developer — RMNA Street (Clothing Startup)',
+    org: 'RMNA Street · Co-founder / Developer',
+    desc: 'Built the full-stack web presence for RMNA Street, a modern clothing startup focused on luxury streetwear and everyday fits. Handled everything from UI design to deployment — real-world experience owning a product end to end as a solo developer.',
+    type: 'internship',
+  },
+  {
     year: '2026',
     title: 'Research Intern — AI-Based Landslide Monitoring System',
     org: 'IIT Ropar · CoE SEnSRS & TIH-AWaDH',

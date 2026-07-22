@@ -87,6 +87,7 @@ export default function Experience() {
               <div className="space-y-4">
                 {[
                   { icon: '🎓', title: 'Research Intern — IIT Ropar', desc: 'Working on an AI-Based Landslide Monitoring & Early Warning System at CoE SEnSRS & TIH-AWaDH. Embedded firmware on Nordic nRF5340 + Zephyr RTOS, multi-sensor integration, and dual ML architecture.' },
+                  { icon: '👕', title: 'Full Stack Dev — RMNA Street', desc: 'Built the full web presence for RMNA Street, a clothing startup focused on luxury streetwear. Owned the entire stack solo — from UI to deployment. Real-world practice shipping a product for an actual business.' },
                   { icon: '🟡', title: 'Google Student Ambassador 2026', desc: 'Selected for the Google Student Ambassador Program (Gemini Program). Representing Google\'s AI products and developer ecosystem at LPU.' },
                   { icon: '🏆', title: '7+ Hackathons', desc: 'Participated in 7–8 hackathons across AI, Web, and Hardware — including DTU and IIT Guwahati. Always shipped a working product.' },
                   { icon: '🔬', title: 'RISC Club — Active Member', desc: 'Member of the Research, Innovation & Science Club at LPU. Engaged in technical events, project showcases, and the campus developer community.' },
