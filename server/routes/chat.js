@@ -43,6 +43,9 @@ function generateResponse(message) {
   if (msg.includes('hackathon') || msg.includes('achievement') || msg.includes('dtu') || msg.includes('semixthon')) {
     return `Won 2nd place at SemiXthon'26 at DTU. Also participated in the Intelligent Document AI Hackathon at IIT Guwahati. Overall 7+ hackathons participated — always shipped a working product. Active member of RISC Club at LPU.`;
   }
+  if (msg.includes('google') || msg.includes('ambassador') || msg.includes('gemini program') || msg.includes('gsa')) {
+    return `Ritik was selected for the Google Student Ambassador Program 2026 (Gemini Program). He represents Google's AI products and developer ecosystem at Lovely Professional University, helping build a stronger dev community on campus.`;
+  }
   if (msg.includes('community') || msg.includes('club') || msg.includes('risc') || msg.includes('lpu')) {
     return `Active member of RISC Club (Research, Innovation & Science Club) at Lovely Professional University. Participated in 7+ hackathons and working toward GDSC Lead role to build a stronger developer community on campus.`;
   }
