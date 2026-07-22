@@ -8,16 +8,16 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 12.5px;
+    font-size: 11.5px;
     color: #1a1a1a;
     background: #f4f4f8;
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   /* Toolbar */
   .toolbar {
     background: #1e1e2e;
-    padding: 10px 20px;
+    padding: 8px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,7 +31,7 @@
   .toolbar-left span { color: #6366f1; font-weight: 700; }
   .toolbar-right { display: flex; gap: 8px; align-items: center; }
   .btn {
-    padding: 7px 16px;
+    padding: 6px 14px;
     border: none;
     border-radius: 7px;
     font-size: 12px;
@@ -49,65 +49,59 @@
   .page {
     background: #fff;
     max-width: 860px;
-    margin: 20px auto;
-    padding: 28px 38px;
+    margin: 16px auto;
+    padding: 24px 36px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
     border-radius: 4px;
   }
 
   /* Header */
-  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #4f46e5; }
-  .header-left h1 { font-size: 24px; font-weight: 800; color: #1a1a1a; letter-spacing: -0.5px; }
-  .header-left .title { font-size: 11.5px; color: #6366f1; font-weight: 600; margin-top: 3px; letter-spacing: 0.5px; text-transform: uppercase; }
-  .header-right { text-align: right; font-size: 11.5px; color: #555; line-height: 1.8; }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 2px solid #4f46e5; }
+  .header-left h1 { font-size: 22px; font-weight: 800; color: #1a1a1a; letter-spacing: -0.5px; }
+  .header-left .title { font-size: 10.5px; color: #6366f1; font-weight: 600; margin-top: 2px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .header-right { text-align: right; font-size: 10.5px; color: #555; line-height: 1.7; }
   .header-right a { color: #4f46e5; text-decoration: none; }
 
   /* Sections */
-  .section { margin-bottom: 11px; }
+  .section { margin-bottom: 9px; }
   .section-title {
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: #4f46e5;
     border-bottom: 1px solid #e0e0ff;
-    padding-bottom: 3px;
-    margin-bottom: 6px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
   }
 
   /* Two-col layout */
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
 
   /* Skills */
-  .skill-row { display: flex; gap: 5px; font-size: 11.5px; margin-bottom: 3px; }
-  .skill-label { font-weight: 700; color: #1a1a1a; white-space: nowrap; min-width: 110px; }
+  .skill-row { display: flex; gap: 5px; font-size: 11px; margin-bottom: 2px; }
+  .skill-label { font-weight: 700; color: #1a1a1a; white-space: nowrap; min-width: 105px; }
   .skill-value { color: #444; }
 
   /* Experience / Projects */
-  .item { margin-bottom: 8px; }
+  .item { margin-bottom: 7px; }
   .item-header { display: flex; justify-content: space-between; align-items: baseline; }
-  .item-name { font-weight: 700; font-size: 12.5px; color: #1a1a1a; }
-  .item-badge { font-size: 10px; font-weight: 600; color: #fff; background: #4f46e5; padding: 1px 7px; border-radius: 20px; white-space: nowrap; }
-  .item-sub { font-size: 11px; color: #6366f1; margin: 1px 0 3px; font-weight: 500; }
-  .item-desc { font-size: 11.5px; color: #444; line-height: 1.55; padding-left: 14px; }
+  .item-name { font-weight: 700; font-size: 11.5px; color: #1a1a1a; }
+  .item-badge { font-size: 9.5px; font-weight: 600; color: #fff; background: #4f46e5; padding: 1px 7px; border-radius: 20px; white-space: nowrap; }
+  .item-sub { font-size: 10.5px; color: #6366f1; margin: 1px 0 2px; font-weight: 500; }
+  .item-desc { font-size: 11px; color: #444; line-height: 1.5; padding-left: 13px; }
   .item-desc li { margin-bottom: 1px; }
-  .item-link { font-size: 10.5px; color: #4f46e5; text-decoration: none; }
+  .item-link { font-size: 10px; color: #4f46e5; text-decoration: none; }
 
   /* Achievements inline */
   .ach-list { list-style: none; }
-  .ach-list li { display: flex; gap: 8px; margin-bottom: 5px; align-items: flex-start; font-size: 11.5px; color: #333; }
-  .ach-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #4f46e5; margin-top: 5px; flex-shrink: 0; }
+  .ach-list li { display: flex; gap: 7px; margin-bottom: 4px; align-items: flex-start; font-size: 11px; color: #333; }
+  .ach-list li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #4f46e5; margin-top: 4px; flex-shrink: 0; }
   .ach-list li strong { color: #1a1a1a; }
 
-  /* Certs inline */
-  .cert-inline { font-size: 11.5px; color: #444; margin-bottom: 3px; }
-  .cert-inline strong { color: #1a1a1a; }
-
   /* Education */
-  .edu { display: flex; justify-content: space-between; font-size: 12px; }
-  .edu-left .degree { font-weight: 700; }
-  .edu-left .uni { font-size: 11px; color: #555; margin-top: 1px; }
-  .edu-right { text-align: right; font-size: 11px; color: #666; }
+  .edu-left .degree { font-weight: 700; font-size: 11.5px; }
+  .edu-left .uni { font-size: 10.5px; color: #555; margin-top: 1px; }
 
   /* Editable styles */
   [contenteditable="true"] {
@@ -115,9 +109,7 @@
     border-radius: 3px;
     transition: background 0.15s;
   }
-  [contenteditable="true"]:hover {
-    background: #f0f0ff;
-  }
+  [contenteditable="true"]:hover { background: #f0f0ff; }
   [contenteditable="true"]:focus {
     background: #e8e8ff;
     box-shadow: 0 0 0 2px #6366f144;
@@ -126,7 +118,7 @@
   @media print {
     body { background: #fff; }
     .toolbar { display: none; }
-    .page { margin: 0; padding: 24px 32px; box-shadow: none; border-radius: 0; min-height: unset; }
+    .page { margin: 0; padding: 20px 30px; box-shadow: none; border-radius: 0; }
     [contenteditable] { background: none !important; box-shadow: none !important; }
   }
 </style>
@@ -257,17 +249,15 @@
 <script>
   // Save to localStorage on every keystroke
   document.addEventListener('input', () => {
-    localStorage.setItem('resume_edit_v3', document.querySelector('.page').innerHTML);
+    localStorage.setItem('resume_edit_v4', document.querySelector('.page').innerHTML);
   });
-
   window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('resume_edit_v3');
+    const saved = localStorage.getItem('resume_edit_v4');
     if (saved) document.querySelector('.page').innerHTML = saved;
   });
-
   function resetPage() {
     if (confirm('Reset all edits back to default?')) {
-      localStorage.removeItem('resume_edit_v3');
+      localStorage.removeItem('resume_edit_v4');
       location.reload();
     }
   }
