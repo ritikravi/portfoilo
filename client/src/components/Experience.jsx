@@ -6,12 +6,14 @@ const typeColors = {
   hackathon: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
   project: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
   community: 'bg-green-500/10 text-green-400 border-green-500/20',
+  internship: 'bg-violet-500/10 text-violet-400 border-violet-500/20',
 };
 
 const typeLabels = {
   hackathon: '🏆 Hackathon',
   project: '⚡ Project',
   community: '🌱 Community',
+  internship: '🎓 Internship',
 };
 
 function AchievementItem({ item, index, last }) {
@@ -84,6 +86,7 @@ export default function Experience() {
               <h3 className="font-bold text-[var(--fg)] mb-4 text-lg">Community & Activities</h3>
               <div className="space-y-4">
                 {[
+                  { icon: '🎓', title: 'Research Intern — IIT Ropar', desc: 'Working on an AI-Based Landslide Monitoring & Early Warning System at CoE SEnSRS & TIH-AWaDH. Embedded firmware on Nordic nRF5340 + Zephyr RTOS, multi-sensor integration, and dual ML architecture.' },
                   { icon: '🏆', title: '7+ Hackathons', desc: 'Participated in 7–8 hackathons across AI, Web, and Hardware — including DTU and IIT Guwahati. Always shipped a working product.' },
                   { icon: '🔬', title: 'RISC Club — Active Member', desc: 'Member of the Research, Innovation & Science Club at LPU. Engaged in technical events, project showcases, and the campus developer community.' },
                   { icon: '🎯', title: 'GDSC Lead Aspirant', desc: 'Working toward GDSC Lead role to build a stronger developer community and run impactful technical events at LPU.' },

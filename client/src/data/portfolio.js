@@ -80,6 +80,22 @@ export const projects = [
     image: null,
   },
   {
+    id: 7,
+    title: 'AI Landslide Monitoring System',
+    tagline: 'IoT + ML Early Warning System for Landslide Detection',
+    category: 'IoT',
+    tags: ['nRF5340', 'Zephyr RTOS', 'ESP32', 'ML', 'RS485 Modbus', 'Power BI'],
+    description: 'An AI-powered Landslide Monitoring and Early Warning System built during internship at IIT Ropar. Integrates multiple environmental sensors into a unified embedded platform with dual ML architecture for real-time risk prediction and anomaly detection.',
+    problem: 'Landslide-prone regions in India lack affordable, real-time monitoring infrastructure. Manual inspection is slow and reactive — not predictive.',
+    solution: 'Multi-sensor embedded node (soil moisture RS485, wind speed/direction, rain gauge) on Nordic nRF5340 + Zephyr RTOS. Dual ML: Random Forest for landslide risk prediction + Isolation Forest for anomaly detection. Flask + MERN backend, Power BI real-time analytics, interactive India landslide hazard map.',
+    impact: 'Trained on 825+ real sensor observations. Risk forecasting up to 3 hours ahead with confidence scores. Field-tested at IIT Ropar CoE SEnSRS. Integrated ISRO/NRSC Landslide Atlas data and NDMA safety resources.',
+    techStack: ['Nordic nRF5340', 'Zephyr RTOS', 'ESP32', 'Embedded C/C++', 'RS485 Modbus RTU', 'Python', 'Scikit-Learn', 'Flask', 'React', 'Node.js', 'MongoDB', 'Power BI', 'UART', 'GPIO'],
+    github: null,
+    demo: null,
+    featured: true,
+    image: null,
+  },
+  {
     id: 6,
     title: 'LMS System',
     tagline: 'Full-Stack Library Management Inspired by LPU Central Library',
@@ -111,7 +127,7 @@ export const skills = {
   'IoT & Embedded': {
     icon: '🔌',
     color: 'from-green-500 to-emerald-500',
-    items: ['ESP32', 'Arduino', 'Raspberry Pi', 'MQTT', 'Embedded C', 'I2S Audio', 'PCM Streaming', 'Sensor Integration'],
+    items: ['ESP32', 'Arduino', 'Raspberry Pi', 'Nordic nRF5340', 'Zephyr RTOS', 'RS485 Modbus RTU', 'MQTT', 'Embedded C/C++', 'I2S Audio', 'PCM Streaming', 'Sensor Integration', 'UART', 'GPIO Interrupts'],
   },
   'Tools & DevOps': {
     icon: '🛠',
@@ -121,6 +137,20 @@ export const skills = {
 };
 
 export const achievements = [
+  {
+    year: '2026',
+    title: 'Research Intern — AI-Based Landslide Monitoring System',
+    org: 'IIT Ropar · CoE SEnSRS & TIH-AWaDH',
+    desc: 'Working on an AI-powered Landslide Early Warning System using Nordic nRF5340, Zephyr RTOS, ESP32, RS485 Modbus sensors (soil moisture, wind, rain gauge). Built dual ML architecture (Random Forest + Isolation Forest) trained on 825+ real sensor observations, Power BI real-time analytics pipeline, and full sensor-to-cloud infrastructure. Met Prof. Rajeev Ahuja (Director, IIT Ropar) and Mr. Suman Kumar (Domain Coordinator, AWaDH).',
+    type: 'internship',
+  },
+  {
+    year: '2026',
+    title: 'LPU Achievers Meet — Recognized by Vice Chancellor',
+    org: 'Lovely Professional University',
+    desc: 'Honored at LPU Achievers Meet for hackathon achievements and contributions. Received recognition from Vice Chancellor Rashmi Mittal and Saurabh Lakhanpal sir.',
+    type: 'community',
+  },
   {
     year: '2026',
     title: '2nd Place — SemiXthon\'26',
@@ -152,6 +182,24 @@ export const achievements = [
 ];
 
 export const blogs = [
+  {
+    id: 7,
+    title: 'Building an AI Landslide Early Warning System at IIT Ropar',
+    slug: 'iit-ropar-landslide-system',
+    excerpt: 'Week-by-week breakdown of building a real-world IoT + ML landslide monitoring system at IIT Ropar — from ESP32 sensor nodes to Nordic nRF5340, Zephyr RTOS, RS485 Modbus, dual ML models, and Power BI analytics.',
+    tags: ['IoT', 'Embedded', 'ML', 'IIT Ropar'],
+    readTime: 10,
+    date: 'July 2026',
+  },
+  {
+    id: 8,
+    title: 'Nordic nRF5340 + Zephyr RTOS: My First Industry-Grade Embedded Experience',
+    slug: 'nrf5340-zephyr-rtos-iit-ropar',
+    excerpt: 'What it was like setting up the nRF Connect SDK on macOS, doing hardware bring-up on a production Gateway PCB, debugging USB enumeration issues, and understanding SWD/J-Link programming during my IIT Ropar internship.',
+    tags: ['Embedded', 'nRF5340', 'Zephyr RTOS'],
+    readTime: 7,
+    date: 'July 2026',
+  },
   {
     id: 1,
     title: 'How I Built an Autonomous AI Placement System',

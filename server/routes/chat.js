@@ -16,6 +16,9 @@ const knowledge = {
 function generateResponse(message) {
   const msg = message.toLowerCase();
 
+  if (msg.includes('iit ropar') || msg.includes('internship') || msg.includes('landslide') || msg.includes('nrf5340') || msg.includes('zephyr') || msg.includes('awadh') || msg.includes('sensrs')) {
+    return `Ritik is currently interning at IIT Ropar (CoE SEnSRS & TIH-AWaDH), working on an AI-Based Landslide Monitoring & Early Warning System. The system uses Nordic nRF5340 + Zephyr RTOS with RS485 Modbus sensors (soil moisture, wind, rain gauge). Dual ML: Random Forest for landslide risk prediction + Isolation Forest for anomaly detection, trained on 825+ real sensor observations. Includes Power BI real-time analytics and forecasting up to 3 hours ahead. Had the opportunity to meet Prof. Rajeev Ahuja (Director, IIT Ropar) and work with industry-grade UAV/geomatics equipment.`;
+  }
   if (msg.includes('hackai') || msg.includes('placement') || msg.includes('agentic')) {
     return `HackAI is an autonomous placement intelligence system — not just a chatbot. It uses Groq LLaMA 3.3 70B to predict placement probability, run mock interviews, generate personalized daily tasks via cron agents, and auto-intervene when a student is at risk. It also generates ATS-friendly resumes from real GitHub + LeetCode data, matched to live job listings. Live at hackai-seven.vercel.app`;
   }
@@ -56,7 +59,7 @@ function generateResponse(message) {
     return `The blog covers real project learnings — building agentic AI systems, connecting ESP32 to Node.js, and lessons from blockchain development. Check the Blog section for the latest posts.`;
   }
 
-  return `I can tell you about Ritik's projects (HackAI, LectureAI, Smart Attendance, E-Voting, AttendX, LMS), skills, achievements, or how to get in touch. What would you like to know?`;
+  return `I can tell you about Ritik's internship at IIT Ropar, projects (HackAI, LectureAI, Landslide Monitoring, Smart Attendance, E-Voting, AttendX, LMS), skills, achievements, or how to get in touch. What would you like to know?`;
 }
 
 router.post('/', (req, res) => {
