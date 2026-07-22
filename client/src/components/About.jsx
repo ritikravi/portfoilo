@@ -45,10 +45,15 @@ export default function About() {
             </AnimatedSection>
             <AnimatedSection delay={0.3}>
               <p className="text-[var(--muted)] leading-relaxed">
-                I won 2nd place at <span className="text-[var(--fg)] font-medium">SemiXthon'26 at DTU</span> — not by having the most polished slides, but by shipping a working IoT healthcare system in 24 hours. That's the standard I hold myself to: real, working, impactful.
+                Currently interning at <span className="text-[var(--fg)] font-medium">IIT Ropar</span> (CoE SEnSRS & TIH-AWaDH), building an AI-Based Landslide Monitoring & Early Warning System — embedded firmware on <span className="text-[var(--fg)] font-medium">Nordic nRF5340 + Zephyr RTOS</span>, multi-sensor RS485 integration, dual ML models trained on real field data, and Power BI analytics pipelines. Working alongside researchers and getting exposure to industry-grade hardware that most students never touch.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.4}>
+              <p className="text-[var(--muted)] leading-relaxed">
+                I won 2nd place at <span className="text-[var(--fg)] font-medium">SemiXthon'26 at DTU</span> — not by having the most polished slides, but by shipping a working IoT system in 24 hours. That's the standard I hold myself to: real, working, impactful.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection delay={0.5}>
               <p className="text-[var(--muted)] leading-relaxed">
                 I'm a student at <span className="text-[var(--fg)] font-medium">Lovely Professional University, Punjab</span> — active member of the <span className="text-[var(--fg)] font-medium">RISC Club</span>, participated in 7+ hackathons, and working toward a <span className="text-[var(--fg)] font-medium">GDSC Lead</span> role to build a stronger developer community on campus.
               </p>
