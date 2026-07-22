@@ -139,6 +139,13 @@ export const skills = {
 export const achievements = [
   {
     year: '2026',
+    title: 'Research Intern — AI-Based Landslide Monitoring System',
+    org: 'IIT Ropar · CoE SEnSRS & TIH-AWaDH',
+    desc: 'Working on an AI-powered Landslide Early Warning System using Nordic nRF5340, Zephyr RTOS, ESP32, RS485 Modbus sensors (soil moisture, wind, rain gauge). Built dual ML architecture (Random Forest + Isolation Forest) trained on 825+ real sensor observations, Power BI real-time analytics pipeline, and full sensor-to-cloud infrastructure. Met Prof. Rajeev Ahuja (Director, IIT Ropar) and Mr. Suman Kumar (Domain Coordinator, AWaDH).',
+    type: 'internship',
+  },
+  {
+    year: '2026',
     title: 'Google Student Ambassador — Gemini Program',
     org: 'Google',
     desc: 'Selected for the Google Student Ambassador Program 2026 (Gemini Program). Representing Google\'s AI products and developer ecosystem on campus, fostering a stronger developer community at LPU.',
@@ -149,13 +156,6 @@ export const achievements = [
     title: 'Full Stack Developer — RMNA Street (Clothing Startup)',
     org: 'RMNA Street · Co-founder / Developer',
     desc: 'Built the full-stack web presence for RMNA Street, a modern clothing startup focused on luxury streetwear and everyday fits. Handled everything from UI design to deployment — real-world experience owning a product end to end as a solo developer.',
-    type: 'internship',
-  },
-  {
-    year: '2026',
-    title: 'Research Intern — AI-Based Landslide Monitoring System',
-    org: 'IIT Ropar · CoE SEnSRS & TIH-AWaDH',
-    desc: 'Working on an AI-powered Landslide Early Warning System using Nordic nRF5340, Zephyr RTOS, ESP32, RS485 Modbus sensors (soil moisture, wind, rain gauge). Built dual ML architecture (Random Forest + Isolation Forest) trained on 825+ real sensor observations, Power BI real-time analytics pipeline, and full sensor-to-cloud infrastructure. Met Prof. Rajeev Ahuja (Director, IIT Ropar) and Mr. Suman Kumar (Domain Coordinator, AWaDH).',
     type: 'internship',
   },
   {
