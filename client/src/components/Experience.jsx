@@ -87,8 +87,8 @@ export default function Experience() {
               <div className="space-y-4">
                 {[
                   { icon: '🎓', title: 'Research Intern — IIT Ropar', desc: 'Working on an AI-Based Landslide Monitoring & Early Warning System at CoE SEnSRS & TIH-AWaDH. Embedded firmware on Nordic nRF5340 + Zephyr RTOS, multi-sensor integration, and dual ML architecture.' },
-                  { icon: '👕', title: 'Founder — RMNA Street', desc: 'Founded RMNA Street, a clothing startup focused on luxury streetwear. Built the complete full-stack web presence as founder and developer. Live at rmnastreet.com.' },
                   { icon: '🟡', title: 'Google Student Ambassador 2026', desc: 'Selected for the Google Student Ambassador Program (Gemini Program). Representing Google\'s AI products and developer ecosystem at LPU.' },
+                  { icon: '👕', title: 'Founder — RMNA Street', desc: 'Founded RMNA Street, a clothing startup focused on luxury streetwear. Built the complete full-stack web presence as founder and developer. Live at rmnastreet.com.' },
                   { icon: '🏆', title: '7+ Hackathons', desc: 'Participated in 7–8 hackathons across AI, Web, and Hardware — including DTU and IIT Guwahati. Always shipped a working product.' },
                   { icon: '🔬', title: 'RISC Club — Active Member', desc: 'Member of the Research, Innovation & Science Club at LPU. Engaged in technical events, project showcases, and the campus developer community.' },
                   { icon: '🎯', title: 'GDSC Lead Aspirant', desc: 'Working toward GDSC Lead role to build a stronger developer community and run impactful technical events at LPU.' },
