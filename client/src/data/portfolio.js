@@ -231,8 +231,15 @@ export const blogs = [
     date: 'July 2026',
   },
   {
-    id: 1,
-    title: 'How I Built an Autonomous AI Placement System',
+    id: 9,
+    title: 'From Idea to rmnastreet.com — Founding a Clothing Startup as a Developer',
+    slug: 'rmna-street-startup',
+    excerpt: 'How I founded RMNA Street, a luxury streetwear brand, and built the entire web presence from scratch — UI design, full-stack development, and deploying to a real custom domain. My first real-world production deployment outside of side projects.',
+    tags: ['Startup', 'MERN', 'Full Stack'],
+    readTime: 5,
+    date: 'June 2026',
+  },
+  {
     slug: 'hackai-agentic-ai',
     excerpt: 'The story behind HackAI — building a system that doesn\'t just respond, but decides and acts. Groq LLaMA 3.3, cron agents, real job data, and lessons from shipping fast.',
     tags: ['AI', 'MERN', 'Agentic AI'],
