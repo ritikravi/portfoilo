@@ -264,18 +264,17 @@
 <script>
   // Save to localStorage on every keystroke
   document.addEventListener('input', () => {
-    localStorage.setItem('resume_edit_content', document.querySelector('.page').innerHTML);
+    localStorage.setItem('resume_edit_v2', document.querySelector('.page').innerHTML);
   });
 
-  // Restore on load
   window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('resume_edit_content');
+    const saved = localStorage.getItem('resume_edit_v2');
     if (saved) document.querySelector('.page').innerHTML = saved;
   });
 
   function resetPage() {
     if (confirm('Reset all edits back to default?')) {
-      localStorage.removeItem('resume_edit_content');
+      localStorage.removeItem('resume_edit_v2');
       location.reload();
     }
   }
