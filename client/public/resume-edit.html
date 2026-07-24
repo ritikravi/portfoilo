@@ -166,6 +166,7 @@
     <div class="section">
       <div class="section-title">Technical Skills</div>
       <div class="skill-row"><span class="skill-label" contenteditable="true">Languages:</span><span class="skill-value" contenteditable="true">JavaScript, Python, C, C++, Dart</span></div>
+      <div class="skill-row"><span class="skill-label" contenteditable="true">CS Fundamentals:</span><span class="skill-value" contenteditable="true">DSA (learning), OOP, DBMS, Algorithms, OS, Computer Networks</span></div>
       <div class="skill-row"><span class="skill-label" contenteditable="true">AI & LLMs:</span><span class="skill-value" contenteditable="true">Groq, LLaMA 3.3 70B, Whisper, Agentic AI, OpenAI</span></div>
       <div class="skill-row"><span class="skill-label" contenteditable="true">Web (MERN):</span><span class="skill-value" contenteditable="true">React 18, Node.js, Express.js, MongoDB, REST APIs</span></div>
       <div class="skill-row"><span class="skill-label" contenteditable="true">Embedded & IoT:</span><span class="skill-value" contenteditable="true">nRF5340, Zephyr RTOS, ESP32, RS485, Arduino, MQTT</span></div>
@@ -250,15 +251,15 @@
 <script>
   // Save to localStorage on every keystroke
   document.addEventListener('input', () => {
-    localStorage.setItem('resume_edit_v4', document.querySelector('.page').innerHTML);
+    localStorage.setItem('resume_edit_v5', document.querySelector('.page').innerHTML);
   });
   window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('resume_edit_v4');
+    const saved = localStorage.getItem('resume_edit_v5');
     if (saved) document.querySelector('.page').innerHTML = saved;
   });
   function resetPage() {
     if (confirm('Reset all edits back to default?')) {
-      localStorage.removeItem('resume_edit_v4');
+      localStorage.removeItem('resume_edit_v5');
       location.reload();
     }
   }
