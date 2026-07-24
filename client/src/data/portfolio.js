@@ -10,7 +10,7 @@ export const projects = [
     solution: 'Multi-sensor embedded node (soil moisture RS485, wind speed/direction, rain gauge) on Nordic nRF5340 + Zephyr RTOS. Dual ML: Random Forest for landslide risk prediction + Isolation Forest for anomaly detection. Flask + MERN backend, Power BI real-time analytics, interactive India landslide hazard map.',
     impact: 'Trained on 825+ real sensor observations. Risk forecasting up to 3 hours ahead with confidence scores. Field-tested at IIT Ropar CoE SEnSRS. Integrated ISRO/NRSC Landslide Atlas data and NDMA safety resources.',
     techStack: ['Nordic nRF5340', 'Zephyr RTOS', 'ESP32', 'Embedded C/C++', 'RS485 Modbus RTU', 'Python', 'Scikit-Learn', 'Flask', 'React', 'Node.js', 'MongoDB', 'Power BI', 'UART', 'GPIO'],
-    github: null,
+    github: 'https://github.com/ritikravi/landslide-ml',
     demo: null,
     featured: true,
     image: null,
