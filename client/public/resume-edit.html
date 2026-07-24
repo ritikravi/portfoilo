@@ -196,7 +196,7 @@
       </div>
       <div class="item-sub" contenteditable="true">CoE SEnSRS & TIH-AWaDH, Indian Institute of Technology Ropar</div>
       <ul class="item-desc" contenteditable="true">
-        <li>Embedded firmware on Nordic nRF5340 + Zephyr RTOS with RS485 Modbus sensors (soil moisture, wind, rain gauge) using UART & GPIO interrupts.</li>
+        <li>Developed embedded firmware in C/C++ for Nordic nRF5340 using Zephyr RTOS, integrating RS485 Modbus sensors via UART and GPIO interrupts for real-time environmental monitoring.</li>
         <li>Dual ML pipeline: Random Forest (risk prediction) + Isolation Forest (anomaly detection) on 825+ real sensor observations; forecasting 3hrs ahead.</li>
         <li>Full MERN dashboard with Power BI real-time streaming, India hazard map (ISRO/NRSC data), and on-site field testing at CoE SEnSRS.</li>
       </ul>
@@ -215,7 +215,7 @@
       </div>
       <div class="item-sub" contenteditable="true">Nordic nRF5340 · Zephyr RTOS · ESP32 · RS485 Modbus · Python · Scikit-Learn · Flask · React · Node.js · MongoDB · Power BI</div>
       <ul class="item-desc" contenteditable="true">
-        <li>Multi-sensor embedded node (soil moisture, wind, rain gauge) on nRF5340 + Zephyr RTOS. Dual ML: Random Forest + Isolation Forest, trained on 825+ real observations.</li>
+        <li>Developed embedded firmware in C/C++ for Nordic nRF5340 using Zephyr RTOS, integrating RS485 Modbus sensors via UART and GPIO interrupts for real-time environmental monitoring.</li>
         <li>Full MERN dashboard with Power BI real-time streaming, India hazard map (ISRO/NRSC data), risk forecasting up to 3 hours ahead. Field-tested at CoE SEnSRS.</li>
       </ul>
       <span class="item-link" contenteditable="true">github.com/ritikravi/landslide-ml</span>
@@ -266,15 +266,15 @@
 <script>
   // Save to localStorage on every keystroke
   document.addEventListener('input', () => {
-    localStorage.setItem('resume_edit_v11', document.querySelector('.page').innerHTML);
+    localStorage.setItem('resume_edit_v12', document.querySelector('.page').innerHTML);
   });
   window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('resume_edit_v11');
+    const saved = localStorage.getItem('resume_edit_v12');
     if (saved) document.querySelector('.page').innerHTML = saved;
   });
   function resetPage() {
     if (confirm('Reset all edits back to default?')) {
-      localStorage.removeItem('resume_edit_v11');
+      localStorage.removeItem('resume_edit_v12');
       location.reload();
     }
   }
