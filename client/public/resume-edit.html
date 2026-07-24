@@ -157,7 +157,7 @@
   <div class="section">
     <div class="section-title">Profile</div>
     <div contenteditable="true" style="font-size:12px; color:#444; line-height:1.6;">
-      Full Stack Developer and Research Intern at IIT Ropar with experience in MERN stack, Embedded Systems (Nordic nRF5340, Zephyr RTOS), and Applied ML. Built 7+ production projects across AI, IoT, and Web. Google Student Ambassador 2026 (Gemini Program). 2nd place @ SemiXthon'26, DTU. Strong in backend systems, REST APIs, Agentic AI, and cloud deployment.
+      Software Engineering student with hands-on experience building scalable full-stack applications, embedded systems, and AI-powered solutions. Research Intern at IIT Ropar with experience in MERN, Python, C++, cloud deployment, and machine learning. Google Student Ambassador 2026 (Gemini Program). 2nd place @ SemiXthon'26, DTU. Passionate about solving engineering problems and building reliable software systems.
     </div>
   </div>
 
@@ -251,15 +251,15 @@
 <script>
   // Save to localStorage on every keystroke
   document.addEventListener('input', () => {
-    localStorage.setItem('resume_edit_v5', document.querySelector('.page').innerHTML);
+    localStorage.setItem('resume_edit_v6', document.querySelector('.page').innerHTML);
   });
   window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('resume_edit_v5');
+    const saved = localStorage.getItem('resume_edit_v6');
     if (saved) document.querySelector('.page').innerHTML = saved;
   });
   function resetPage() {
     if (confirm('Reset all edits back to default?')) {
-      localStorage.removeItem('resume_edit_v5');
+      localStorage.removeItem('resume_edit_v6');
       location.reload();
     }
   }
