@@ -221,13 +221,13 @@
 
     <div class="item">
       <div class="item-header">
-        <span class="item-name" contenteditable="true">RMNA Street — Clothing Startup</span>
-        <span class="item-badge" contenteditable="true">Founder · Live</span>
+        <span class="item-name" contenteditable="true">RMNA Street — E-Commerce Platform</span>
+        <span class="item-badge" contenteditable="true">Production · Live</span>
       </div>
-      <div class="item-sub" contenteditable="true">React · Node.js · Express · MongoDB · TailwindCSS · Vercel · rmnastreet.com</div>
+      <div class="item-sub" contenteditable="true">React · Node.js · Express · MongoDB · REST APIs · JWT · TailwindCSS · Vercel · rmnastreet.com</div>
       <ul class="item-desc" contenteditable="true">
-        <li>Founded RMNA Street, a luxury streetwear brand. Built and deployed the complete full-stack web presence solo — UI design, frontend, backend, custom domain.</li>
-        <li>First real-world production domain deployment as founder. Live at rmnastreet.com.</li>
+        <li>Designed and deployed a production MERN e-commerce platform with JWT authentication, REST APIs, MongoDB, and Vercel deployment.</li>
+        <li>Built full product catalog, responsive UI, and backend from scratch — live on a custom domain at rmnastreet.com.</li>
       </ul>
       <span class="item-link" contenteditable="true">rmnastreet.com</span>
     </div>
@@ -251,15 +251,15 @@
 <script>
   // Save to localStorage on every keystroke
   document.addEventListener('input', () => {
-    localStorage.setItem('resume_edit_v6', document.querySelector('.page').innerHTML);
+    localStorage.setItem('resume_edit_v7', document.querySelector('.page').innerHTML);
   });
   window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('resume_edit_v6');
+    const saved = localStorage.getItem('resume_edit_v7');
     if (saved) document.querySelector('.page').innerHTML = saved;
   });
   function resetPage() {
     if (confirm('Reset all edits back to default?')) {
-      localStorage.removeItem('resume_edit_v6');
+      localStorage.removeItem('resume_edit_v7');
       location.reload();
     }
   }
