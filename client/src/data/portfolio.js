@@ -11,7 +11,7 @@ export const projects = [
     impact: 'Trained on 825+ real sensor observations. Risk forecasting up to 3 hours ahead with confidence scores. Field-tested at IIT Ropar CoE SEnSRS. Integrated ISRO/NRSC Landslide Atlas data and NDMA safety resources.',
     techStack: ['Nordic nRF5340', 'Zephyr RTOS', 'ESP32', 'Embedded C/C++', 'RS485 Modbus RTU', 'Python', 'Scikit-Learn', 'Flask', 'React', 'Node.js', 'MongoDB', 'Power BI', 'UART', 'GPIO'],
     github: 'https://github.com/ritikravi/landslide-ml',
-    demo: null,
+    demo: 'https://frontend-kappa-two-57.vercel.app/',
     featured: true,
     image: null,
   },
