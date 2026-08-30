@@ -277,14 +277,49 @@
 </div><!-- end .page -->
 
 <script>
+  // Password Protection
+  const RESUME_PASSWORD = 'ritik2026';
+  
+  function checkPassword() {
+    const input = document.getElementById('passwordInput');
+    const error = document.getElementById('passwordError');
+    const overlay = document.getElementById('passwordOverlay');
+    
+    if (input.value === RESUME_PASSWORD) {
+      overlay.classList.add('hidden');
+      sessionStorage.setItem('resume_unlocked', 'true');
+    } else {
+      error.style.display = 'block';
+      input.value = '';
+      input.focus();
+    }
+  }
+  
+  // Allow Enter key and check if already unlocked
+  window.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('passwordInput');
+    if (input) {
+      input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') checkPassword();
+      });
+      input.focus();
+    }
+    
+    // Check if already unlocked in this session
+    if (sessionStorage.getItem('resume_unlocked') === 'true') {
+      document.getElementById('passwordOverlay').classList.add('hidden');
+    }
+    
+    // Load saved edits
+    const saved = localStorage.getItem('resume_edit_v12');
+    if (saved) document.querySelector('.page').innerHTML = saved;
+  });
+
   // Save to localStorage on every keystroke
   document.addEventListener('input', () => {
     localStorage.setItem('resume_edit_v12', document.querySelector('.page').innerHTML);
   });
-  window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('resume_edit_v12');
-    if (saved) document.querySelector('.page').innerHTML = saved;
-  });
+  
   function resetPage() {
     if (confirm('Reset all edits back to default?')) {
       localStorage.removeItem('resume_edit_v12');
