@@ -277,70 +277,17 @@
 </div><!-- end .page -->
 
 <script>
-  // Server-side password authentication
-  const API_URL = 'https://portfoilo-4lwl.onrender.com/api/resume/verify';
-  
-  async function checkPassword() {
-    const input = document.getElementById('passwordInput');
-    const error = document.getElementById('passwordError');
-    const overlay = document.getElementById('passwordOverlay');
-    const submitBtn = document.querySelector('.password-submit');
-    
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Verifying...';
-    
-    try {
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password: input.value })
-      });
-      
-      const data = await response.json();
-      
-      if (data.success) {
-        overlay.classList.add('hidden');
-        sessionStorage.setItem('resume_unlocked', 'true');
-      } else {
-        error.style.display = 'block';
-        error.textContent = 'Incorrect password. Please try again.';
-        input.value = '';
-        input.focus();
-      }
-    } catch (err) {
-      error.style.display = 'block';
-      error.textContent = 'Connection error. Please try again.';
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Unlock Resume';
-    }
-  }
-  
-  // Allow Enter key and check if already unlocked
-  window.addEventListener('DOMContentLoaded', () => {
-    const input = document.getElementById('passwordInput');
-    if (input) {
-      input.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') checkPassword();
-      });
-      input.focus();
-    }
-    
-    // Check if already unlocked in this session
-    if (sessionStorage.getItem('resume_unlocked') === 'true') {
-      document.getElementById('passwordOverlay').classList.add('hidden');
-    }
-    
-    // Load saved edits
-    const saved = localStorage.getItem('resume_edit_v12');
-    if (saved) document.querySelector('.page').innerHTML = saved;
-  });
-
+if(!sessionStorage.getItem("auth"))window.location.href="resume-password.html";
+</script>
+<script>
   // Save to localStorage on every keystroke
   document.addEventListener('input', () => {
     localStorage.setItem('resume_edit_v12', document.querySelector('.page').innerHTML);
   });
-  
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('resume_edit_v12');
+    if (saved) document.querySelector('.page').innerHTML = saved;
+  });
   function resetPage() {
     if (confirm('Reset all edits back to default?')) {
       localStorage.removeItem('resume_edit_v12');
