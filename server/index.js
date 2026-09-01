@@ -10,6 +10,9 @@ const app = express();
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5175', credentials: true }));
 app.use(express.json());
 
+// Special CORS for resume route to allow access from deployed site
+app.use('/api/resume', cors({ origin: '*' }));
+
 // Routes
 app.use('/api/projects', require('./routes/projects'));
 app.use('/api/blogs', require('./routes/blogs'));
