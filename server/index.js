@@ -21,7 +21,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/chat', require('./routes/chat'));
 app.use('/api/resume', require('./routes/resume'));
 
-app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
+app.get('/api/health', (req, res) => res.json({ status: 'ok', timestamp: Date.now() }));
 
 const PORT = process.env.PORT || 5000;
 
