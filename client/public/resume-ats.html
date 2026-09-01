@@ -38,6 +38,8 @@
   }
   .btn:hover { opacity: 0.85; }
   .btn-print { background: #4f46e5; color: #fff; }
+  .btn-reset { background: #3f3f5a; color: #ccc; }
+  .edit-tip { color: #6b6b8a; font-size: 11px; }
 
   .page {
     background: #fff;
@@ -143,18 +145,35 @@
     margin-top: 2px;
   }
 
+  /* Editable styles */
+  [contenteditable="true"] {
+    outline: none;
+    border-radius: 2px;
+    transition: background 0.15s;
+  }
+  [contenteditable="true"]:hover {
+    background: #f0f0ff;
+  }
+  [contenteditable="true"]:focus {
+    background: #e8e8ff;
+    box-shadow: 0 0 0 2px #6366f144;
+  }
+
   @media print {
     body { background: #fff; }
     .toolbar { display: none; }
     .page { margin: 0; padding: 30px 40px; box-shadow: none; }
+    [contenteditable] { background: none !important; box-shadow: none !important; }
   }
 </style>
 </head>
 <body>
 
 <div class="toolbar">
-  <div class="toolbar-left">📄 <span>ATS Resume Format</span> — College-friendly format</div>
+  <div class="toolbar-left">📄 <span>ATS Resume Format</span> — Click any text to edit, then print</div>
   <div class="toolbar-right">
+    <span class="edit-tip">All text is editable</span>
+    <button class="btn btn-reset" onclick="resetPage()">Reset</button>
     <button class="btn btn-print" onclick="window.print()">⬇ Download / Print PDF</button>
   </div>
 </div>
@@ -163,8 +182,8 @@
 
   <!-- HEADER -->
   <div class="header">
-    <h1>Ritik Raushan</h1>
-    <div class="contact">
+    <h1 contenteditable="true">Ritik Raushan</h1>
+    <div class="contact" contenteditable="true">
       LinkedIn: <a href="https://www.linkedin.com/in/ritik-raushan-626584383" target="_blank">linkedin.com/in/ritik-raushan-626584383</a>
       Email: ritikravi7724@gmail.com
       Github: <a href="https://github.com/ritikravi" target="_blank">github.com/ritikravi</a><br/>
@@ -175,7 +194,7 @@
   <!-- SKILLS -->
   <div class="section">
     <div class="section-title">Skills</div>
-    <div class="skills-grid">
+    <div class="skills-grid" contenteditable="true">
       <div class="skill-label">Languages:</div>
       <div>C++, Python, C, JavaScript, SQL, Dart</div>
       
@@ -190,6 +209,7 @@
   <!-- PROJECTS -->
   <div class="section">
     <div class="section-title">Projects</div>
+    <div contenteditable="true">
 
     <div class="project-item">
       <div class="project-header">
@@ -250,10 +270,12 @@
     </div>
 
   </div>
+  </div>
 
   <!-- EXPERIENCE -->
   <div class="section">
     <div class="section-title">Experience</div>
+    <div contenteditable="true">
 
     <div class="exp-item">
       <div class="project-header">
@@ -269,10 +291,12 @@
     </div>
 
   </div>
+  </div>
 
   <!-- CERTIFICATES -->
   <div class="section">
     <div class="section-title">Certificates</div>
+    <div contenteditable="true">
     
     <div class="cert-item">
       <div>
@@ -299,10 +323,12 @@
     </div>
 
   </div>
+  </div>
 
   <!-- EDUCATION -->
   <div class="section">
     <div class="section-title">Education</div>
+    <div contenteditable="true">
 
     <div class="edu-item">
       <div>
@@ -324,8 +350,32 @@
     </div>
 
   </div>
+  </div>
 
 </div>
+
+<script>
+// Save to localStorage on every keystroke
+document.addEventListener('input', () => {
+  localStorage.setItem('resume_ats_v1', document.querySelector('.page').innerHTML);
+});
+
+// Load saved content on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('resume_ats_v1');
+  if (saved) {
+    document.querySelector('.page').innerHTML = saved;
+  }
+});
+
+// Reset to default
+function resetPage() {
+  if (confirm('Reset all edits back to default?')) {
+    localStorage.removeItem('resume_ats_v1');
+    location.reload();
+  }
+}
+</script>
 
 </body>
 </html>
