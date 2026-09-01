@@ -10,16 +10,12 @@ const app = express();
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5175', credentials: true }));
 app.use(express.json());
 
-// Special CORS for resume route to allow access from deployed site
-app.use('/api/resume', cors({ origin: '*' }));
-
 // Routes
 app.use('/api/projects', require('./routes/projects'));
 app.use('/api/blogs', require('./routes/blogs'));
 app.use('/api/contact', require('./routes/contact'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/chat', require('./routes/chat'));
-app.use('/api/resume', require('./routes/resume'));
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', timestamp: Date.now() }));
 
