@@ -10,10 +10,10 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 10.5px;
+    font-size: 11px;
     color: #1a1a1a;
     background: #f4f4f8;
-    line-height: 1.35;
+    line-height: 1.4;
   }
 
   /* Toolbar */
@@ -52,58 +52,58 @@
     background: #fff;
     max-width: 860px;
     margin: 16px auto;
-    padding: 20px 32px;
+    padding: 22px 34px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
     border-radius: 4px;
   }
 
   /* Header */
-  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; padding-bottom: 7px; border-bottom: 2px solid #4f46e5; }
-  .header-left h1 { font-size: 20px; font-weight: 800; color: #1a1a1a; letter-spacing: -0.5px; }
-  .header-left .title { font-size: 9.5px; color: #6366f1; font-weight: 600; margin-top: 2px; letter-spacing: 0.5px; text-transform: uppercase; }
-  .header-right { text-align: right; font-size: 9.5px; color: #555; line-height: 1.6; }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 2px solid #4f46e5; }
+  .header-left h1 { font-size: 21px; font-weight: 800; color: #1a1a1a; letter-spacing: -0.5px; }
+  .header-left .title { font-size: 10px; color: #6366f1; font-weight: 600; margin-top: 2px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .header-right { text-align: right; font-size: 10px; color: #555; line-height: 1.65; }
   .header-right a { color: #4f46e5; text-decoration: none; }
 
   /* Sections */
-  .section { margin-bottom: 7px; }
+  .section { margin-bottom: 8px; }
   .section-title {
-    font-size: 9px;
+    font-size: 9.5px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: #4f46e5;
     border-bottom: 1px solid #e0e0ff;
     padding-bottom: 2px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
 
   /* Two-col layout */
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
 
   /* Skills */
-  .skill-row { display: flex; gap: 5px; font-size: 10px; margin-bottom: 1px; }
-  .skill-label { font-weight: 700; color: #1a1a1a; white-space: nowrap; min-width: 95px; }
+  .skill-row { display: flex; gap: 5px; font-size: 10.5px; margin-bottom: 2px; }
+  .skill-label { font-weight: 700; color: #1a1a1a; white-space: nowrap; min-width: 100px; }
   .skill-value { color: #444; }
 
   /* Experience / Projects */
-  .item { margin-bottom: 5px; }
+  .item { margin-bottom: 6px; }
   .item-header { display: flex; justify-content: space-between; align-items: baseline; }
-  .item-name { font-weight: 700; font-size: 10.5px; color: #1a1a1a; }
+  .item-name { font-weight: 700; font-size: 11px; color: #1a1a1a; }
   .item-badge { font-size: 9px; font-weight: 600; color: #fff; background: #4f46e5; padding: 1px 6px; border-radius: 20px; white-space: nowrap; }
-  .item-sub { font-size: 9.5px; color: #6366f1; margin: 1px 0 2px; font-weight: 500; }
-  .item-desc { font-size: 10px; color: #444; line-height: 1.4; padding-left: 12px; }
+  .item-sub { font-size: 10px; color: #6366f1; margin: 1px 0 2px; font-weight: 500; }
+  .item-desc { font-size: 10.5px; color: #444; line-height: 1.45; padding-left: 12px; }
   .item-desc li { margin-bottom: 1px; }
-  .item-link { font-size: 9px; color: #4f46e5; text-decoration: none; }
+  .item-link { font-size: 9.5px; color: #4f46e5; text-decoration: none; }
 
   /* Achievements inline */
   .ach-list { list-style: none; }
-  .ach-list li { display: flex; gap: 6px; margin-bottom: 3px; align-items: flex-start; font-size: 10px; color: #333; }
-  .ach-list li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: #4f46e5; margin-top: 4px; flex-shrink: 0; }
+  .ach-list li { display: flex; gap: 6px; margin-bottom: 3.5px; align-items: flex-start; font-size: 10.5px; color: #333; }
+  .ach-list li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: #4f46e5; margin-top: 4.5px; flex-shrink: 0; }
   .ach-list li strong { color: #1a1a1a; }
 
   /* Education */
-  .edu-left .degree { font-weight: 700; font-size: 10.5px; }
-  .edu-left .uni { font-size: 9.5px; color: #555; margin-top: 1px; }
+  .edu-left .degree { font-weight: 700; font-size: 11px; }
+  .edu-left .uni { font-size: 10px; color: #555; margin-top: 1px; }
 
   /* Editable styles */
   [contenteditable="true"] {
@@ -121,7 +121,7 @@
     @page { margin: 0; }
     body { background: #fff; }
     .toolbar { display: none; }
-    .page { margin: 0; padding: 18px 28px; box-shadow: none; border-radius: 0; }
+    .page { margin: 0; padding: 20px 30px; box-shadow: none; border-radius: 0; }
     [contenteditable] { background: none !important; box-shadow: none !important; }
   }
 
@@ -161,8 +161,8 @@
   <!-- PROFILE -->
   <div class="section">
     <div class="section-title">Profile</div>
-    <div contenteditable="true" style="font-size:10.5px; color:#444; line-height:1.5;">
-      AI/ML and IoT specialist with hands-on experience in embedded systems, machine learning, and full-stack development. Research Intern at IIT Ropar building AI-based landslide prediction systems. Developed 7+ production projects including hackathon-winning IoT solutions. Google Student Ambassador 2026. Proficient in Python, C/C++, MERN stack, ESP32, and cloud deployment.
+    <div contenteditable="true" style="font-size:11px; color:#444; line-height:1.55;">
+      AI/ML and IoT specialist with hands-on experience in embedded systems, machine learning, and full-stack development. Research Intern at IIT Ropar building AI-based landslide prediction systems with Nordic nRF5340, Zephyr RTOS, and ML models. Developed 7+ production projects including hackathon-winning IoT solutions. Google Student Ambassador 2026. Proficient in Python, C/C++, MERN stack, ESP32, and cloud deployment. Passionate about solving real-world problems with AI and IoT.
     </div>
   </div>
 
@@ -275,7 +275,17 @@
       <li><strong>2nd Place — SemiXthon'26, DTU</strong> — Built AI + IoT smart classroom system (ESP32 + Groq Whisper + LLaMA 3.3) in 24 hours.</li>
       <li><strong>IIT Guwahati Hackathon (Convolve 4.0)</strong> — OCR + LLM pipeline for intelligent document extraction. Cleared screening round.</li>
       <li><strong>LPU Achievers Meet</strong> — Recognized by Vice Chancellor for hackathon achievements and technical contributions.</li>
-      <li><strong>Infosys Springboard Certification</strong> — Cloud Computing fundamentals, deployment models, and scalability (March 2026).</li>
+      <li><strong>Community Mentor</strong> — Conducted technical sessions on MERN Stack, IoT with ESP32, and AI API integration for 100+ students at LPU.</li>
+    </ul>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    <ul class="ach-list" contenteditable="true">
+      <li><strong>Introduction to Cloud Computing</strong> — Infosys Springboard (March 2026) · Cloud fundamentals, deployment models, and scalability</li>
+      <li><strong>Machine Learning & Image Processing</strong> — NASSCOM / thingQbator · ML fundamentals and computer vision techniques</li>
+      <li><strong>AWS Solutions Architecture Job Simulation</strong> — Forage · Cloud architecture, EC2, S3, and AWS best practices</li>
     </ul>
   </div>
 
