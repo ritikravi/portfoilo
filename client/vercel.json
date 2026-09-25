@@ -1,0 +1,18 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/resume.html",
+      "destination": "/resume.html"
+    },
+    {
+      "source": "/resume-edit.html",
+      "destination": "/resume-edit.html"
+    },
+    {
+      "source": "/resume-ats.html",
+      "destination": "/resume-ats.html"
+    }
+  ]
+}
